@@ -13,5 +13,11 @@
         android:visibility="gone"
         android:layout_gravity="center"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
 
 </FrameLayout>
