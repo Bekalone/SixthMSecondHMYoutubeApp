@@ -2,8 +2,7 @@ package com.example.sixthmsecondhmyoutubeapp.youtube
 
 import android.app.Application
 import androidx.room.Room
-import androidx.room.RoomDatabase
-import com.example.sixthmsecondhmyoutubeapp.youtube.local.room.AppDatabase
+import com.example.sixthmsecondhmyoutubeapp.youtube.data.local.room.AppDatabase
 
 class App : Application() {
 
@@ -16,7 +15,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         db =
-            Room.databaseBuilder(this, AppDatabase::class.java, "database").allowMainThreadQueries()
+            Room.databaseBuilder(this, AppDatabase::class.java, "database")
                 .build()
     }
 }

@@ -10,7 +10,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun initView() {
-
+        supportActionBar?.hide()
     }
 
     override fun initListener() {

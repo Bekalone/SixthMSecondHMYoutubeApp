@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/5 month task/Additional task/SixthMSecondHMYoutubeApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1595" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/5 month task/Additional task/SixthMSecondHMYoutubeApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1595" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/5 month task/Additional task/SixthMSecondHMYoutubeApp/app/src/main/res/drawable/ic_social_media_logo_video_player_icon_icons_com_56665.xml" value="0.1595" />
         <entry key="..\:/Users/Notnik/AndroidStudioProjects/5 month task/Additional task/SixthMSecondHMYoutubeApp/app/src/main/res/layout/activity_main.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/5 month task/Additional task/SixthMSecondHMYoutubeApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/Notnik/AndroidStudioProjects/5 month task/Additional task/SixthMSecondHMYoutubeApp/app/src/main/res/layout/fragment_playlist.xml" value="0.25" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/5 month task/Additional task/SixthMSecondHMYoutubeApp/app/src/main/res/layout/fragment_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/Notnik/AndroidStudioProjects/5 month task/Additional task/SixthMSecondHMYoutubeApp/app/src/main/res/layout/item_playlist.xml" value="0.264" />
       </map>
     </option>

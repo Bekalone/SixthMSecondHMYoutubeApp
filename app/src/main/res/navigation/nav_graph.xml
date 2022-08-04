@@ -10,4 +10,9 @@
         android:name="com.example.sixthmsecondhmyoutubeapp.youtube.ui.playlist.PlaylistFragment"
         android:label="fragment_playlist"
         tools:layout="@layout/fragment_playlist" />
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.sixthmsecondhmyoutubeapp.youtube.ui.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen"/>
 </navigation>
