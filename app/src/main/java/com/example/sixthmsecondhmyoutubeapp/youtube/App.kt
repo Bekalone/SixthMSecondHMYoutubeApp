@@ -1,7 +1,7 @@
 package com.example.sixthmsecondhmyoutubeapp.youtube
 
 import android.app.Application
-import com.example.sixthmsecondhmyoutubeapp.youtube.data.newtwork.networkModule
+import com.example.sixthmsecondhmyoutubeapp.youtube.data.network.networkModule
 import com.example.sixthmsecondhmyoutubeapp.youtube.di.dbModule
 import com.example.sixthmsecondhmyoutubeapp.youtube.di.repoModule
 import com.example.sixthmsecondhmyoutubeapp.youtube.di.viewModelModule

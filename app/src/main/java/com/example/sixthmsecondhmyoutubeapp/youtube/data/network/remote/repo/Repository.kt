@@ -1,10 +1,10 @@
-package com.example.sixthmsecondhmyoutubeapp.youtube.data.newtwork.remote.repo
+package com.example.sixthmsecondhmyoutubeapp.youtube.data.network.remote.repo
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.example.sixthmsecondhmyoutubeapp.youtube.data.domain.Resource
 import com.example.sixthmsecondhmyoutubeapp.youtube.data.local.room.AppDatabase
-import com.example.sixthmsecondhmyoutubeapp.youtube.data.newtwork.remote.ApiService
+import com.example.sixthmsecondhmyoutubeapp.youtube.data.network.remote.ApiService
 import com.example.sixthmsecondhmyoutubeapp.youtube.model.ErrorResponse
 import com.example.sixthmsecondhmyoutubeapp.youtube.model.Playlist
 import com.google.gson.Gson

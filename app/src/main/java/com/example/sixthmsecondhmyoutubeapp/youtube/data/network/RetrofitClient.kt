@@ -1,7 +1,7 @@
-package com.example.sixthmsecondhmyoutubeapp.youtube.data.newtwork
+package com.example.sixthmsecondhmyoutubeapp.youtube.data.network
 
 import com.example.sixthmsecondhmyoutubeapp.BuildConfig
-import com.example.sixthmsecondhmyoutubeapp.youtube.data.newtwork.remote.ApiService
+import com.example.sixthmsecondhmyoutubeapp.youtube.data.network.remote.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module

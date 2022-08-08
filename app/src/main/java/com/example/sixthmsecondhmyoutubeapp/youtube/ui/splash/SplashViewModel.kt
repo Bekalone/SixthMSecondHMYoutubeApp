@@ -3,7 +3,7 @@ package com.example.sixthmsecondhmyoutubeapp.youtube.ui.splash
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.switchMap
 import com.example.sixthmsecondhmyoutubeapp.youtube.base.BaseViewModel
-import com.example.sixthmsecondhmyoutubeapp.youtube.data.newtwork.remote.repo.Repository
+import com.example.sixthmsecondhmyoutubeapp.youtube.data.network.remote.repo.Repository
 import com.example.sixthmsecondhmyoutubeapp.youtube.model.Playlist
 
 class SplashViewModel(private val repo: Repository): BaseViewModel() {
