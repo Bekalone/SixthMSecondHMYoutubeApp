@@ -13,19 +13,13 @@ import com.example.sixthmsecondhmyoutubeapp.youtube.App
 import com.example.sixthmsecondhmyoutubeapp.youtube.base.BaseFragment
 import com.example.sixthmsecondhmyoutubeapp.youtube.data.domain.Resource
 import com.example.sixthmsecondhmyoutubeapp.youtube.model.Playlist
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PlaylistFragment : BaseFragment<FragmentPlaylistBinding, PlaylistViewModel>() {
 
     private lateinit var adapter: PlaylistAdapter
 
-    override val viewModel: PlaylistViewModel by lazy {
-        ViewModelProvider(this)[PlaylistViewModel::class.java]
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        findNavController().navigate(R.id.splashScreenFragment)
-    }
+    override val viewModel: PlaylistViewModel by viewModel()
 
     override fun inflateViewBinding(
         inflater: LayoutInflater,
@@ -36,18 +30,7 @@ class PlaylistFragment : BaseFragment<FragmentPlaylistBinding, PlaylistViewModel
     }
 
     override fun initView() {
-        viewModel.getPlaylist()
-        viewModel.playlist.observe(viewLifecycleOwner) {
-            viewModel.progress.value = it.status == Resource.Status.LOADING
-            when (it.status) {
-                Resource.Status.SUCCESS -> {
-                    it.data?.let { it1 -> viewModel.setPlaylist(it1) }
-                }
-                Resource.Status.ERROR -> {
-
-                }
-            }
-        }
+        viewModel.getLocalPlaylist()
         viewModel.localPlaylist.observe(viewLifecycleOwner){
             if (it.status == Resource.Status.SUCCESS){
                 adapter = it.data?.let { it1 -> PlaylistAdapter(it1) }!!
@@ -57,12 +40,6 @@ class PlaylistFragment : BaseFragment<FragmentPlaylistBinding, PlaylistViewModel
 
         viewModel.progress.observe(viewLifecycleOwner) {
             binding.progress.isVisible = it
-        }
-        viewModel.setPlaylist.observe(viewLifecycleOwner) {
-            if (it.status == Resource.Status.SUCCESS && it.data == true) {
-                viewModel.getLocalPlaylist()
-            }
-
         }
     }
 

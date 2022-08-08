@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/playlistFragment">
+    app:startDestination="@id/splashScreenFragment">
 
     <fragment
         android:id="@+id/playlistFragment"
@@ -12,7 +12,13 @@
         tools:layout="@layout/fragment_playlist" />
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.example.sixthmsecondhmyoutubeapp.youtube.ui.SplashScreenFragment"
+        android:name="com.example.sixthmsecondhmyoutubeapp.youtube.ui.splash.SplashScreenFragment"
         android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen"/>
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_playlistFragment"
+            app:destination="@id/playlistFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
 </navigation>

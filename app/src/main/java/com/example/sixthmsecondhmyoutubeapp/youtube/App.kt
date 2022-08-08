@@ -1,21 +1,20 @@
 package com.example.sixthmsecondhmyoutubeapp.youtube
 
 import android.app.Application
-import androidx.room.Room
-import com.example.sixthmsecondhmyoutubeapp.youtube.data.local.room.AppDatabase
+import com.example.sixthmsecondhmyoutubeapp.youtube.data.newtwork.networkModule
+import com.example.sixthmsecondhmyoutubeapp.youtube.di.dbModule
+import com.example.sixthmsecondhmyoutubeapp.youtube.di.repoModule
+import com.example.sixthmsecondhmyoutubeapp.youtube.di.viewModelModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 class App : Application() {
 
-
-    companion object {
-
-        lateinit var db: AppDatabase
-    }
-
     override fun onCreate() {
         super.onCreate()
-        db =
-            Room.databaseBuilder(this, AppDatabase::class.java, "database")
-                .build()
+        startKoin{
+            androidContext(this@App)
+            modules(listOf(networkModule, dbModule, repoModule, viewModelModule))
+        }
     }
 }

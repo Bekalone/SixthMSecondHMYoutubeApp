@@ -8,35 +8,16 @@ import com.example.sixthmsecondhmyoutubeapp.youtube.data.domain.Resource
 import com.example.sixthmsecondhmyoutubeapp.youtube.data.newtwork.remote.repo.Repository
 import com.example.sixthmsecondhmyoutubeapp.youtube.model.Playlist
 
-class PlaylistViewModel : BaseViewModel() {
+class PlaylistViewModel(private val repo: Repository) : BaseViewModel() {
 
-    private val repo = Repository()
-
-    private val _playlist = MutableLiveData<Playlist>()
-    private val _result = MutableLiveData<Boolean>()
     private val _local = MutableLiveData<Boolean>()
-
-    val setPlaylist = _playlist.switchMap {
-        repo.setPlaylist(it)
-    }
-
-    val playlist = _result.switchMap {
-        repo.getPlaylist()
-    }
 
     val localPlaylist = _local.switchMap {
         repo.getLocalPlaylist()
-    }
-
-    fun getPlaylist(){
-        _result.value = true
     }
 
     fun getLocalPlaylist(){
         _local.value = true
     }
 
-    fun setPlaylist(playlist: Playlist) {
-        _playlist.value = playlist
-    }
 }
